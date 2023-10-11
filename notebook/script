@@ -13,7 +13,7 @@ while True:
 
     #Reading the file
     if command == 1:
-            notebook = open("notebook.txt", "r")
+            notebook = open("notebook/notebook.txt", "r")
             notes = notebook.read()
             print(notes)
     #Writing to file
@@ -21,5 +21,9 @@ while True:
             notebook = open("notebook/notebook.txt", "w")
             newNote = input("Write a new note:")
             notebook.write(newNote)
+    #Empty the file        
+    elif command == 3:
+            notebook = open("notebook/notebook.txt", "a")
+            notebook.truncate(0)
 
     notebook.close()
