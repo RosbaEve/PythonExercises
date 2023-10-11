@@ -5,5 +5,14 @@ print("(1) Read the notebook")
 print("(2) Add note")
 print("(3) Empty the notebook")
 print("(4) Quit")
-	
+
+#Asking execution command from user	
 command = int(input("Please select one:"))
+
+#Writing to file
+if command == 2:
+		notebook = open("notebook.txt", "w")
+		newNote = input("Write a new note:")
+		notebook.write(newNote)
+
+notebook.close()
