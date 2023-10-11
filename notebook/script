@@ -5,3 +5,5 @@ print("(1) Read the notebook")
 print("(2) Add note")
 print("(3) Empty the notebook")
 print("(4) Quit")
+	
+command = int(input("Please select one:"))
