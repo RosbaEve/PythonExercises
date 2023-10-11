@@ -11,8 +11,13 @@ while True:
     #Asking execution command from user	
     command = int(input("Please select one:"))
 
+    #Reading the file
+    if command == 1:
+            notebook = open("notebook.txt", "r")
+            notes = notebook.read()
+            print(notes)
     #Writing to file
-    if command == 2:
+    elif command == 2:
             notebook = open("notebook/notebook.txt", "w")
             newNote = input("Write a new note:")
             notebook.write(newNote)
