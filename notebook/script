@@ -11,7 +11,7 @@ command = int(input("Please select one:"))
 
 #Writing to file
 if command == 2:
-		notebook = open("notebook.txt", "w")
+		notebook = open("notebook/notebook.txt", "w")
 		newNote = input("Write a new note:")
 		notebook.write(newNote)
 
