@@ -46,3 +46,12 @@ Notes deleted.
 
 Please select one: 4
 Notebook shutting down, thank you.
+
+The last exercise in this chapter adds a small feature to the other continuous exercise project, the notebook. In this exercise, add a feature which includes the date and time of the written note to the program. The program works as earlier, but saves data in the form "[note]:::[date and time]" meaning that there is a three-colon separator between the note and timestamp. The timestamp can be generated as follows:
+	
+>>> import time		
+
+>>> time.strftime("%X %x")
+'19:01:34 01/03/09'
+>>> 
+
