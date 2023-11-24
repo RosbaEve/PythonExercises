@@ -1,0 +1,44 @@
+import random
+
+rounds = 0
+wins = 0
+tie = 0
+
+
+while True:
+	player = input("Foot, Nuke or Cockroach? (Quit ends):")
+	if player == "Quit":
+		break
+	
+	choises = ["Cockroach", "Foot", "Nuke"]
+	computer = choises[random.randint(0,2)]
+	
+	if player not in choises:
+		print("Incorrect selection.")
+		continue
+		
+	print("You chose:", player)
+	print("Computer chose:", computer)
+	
+	rounds += 1
+	
+	if player == "Nuke" and computer == "Foot":
+		print("You WIN!")
+		wins += 1
+	elif player == "Foot" and computer == "Cockroach":
+		wins += 1
+		print("You WIN!")
+	elif player == "Cockroach" and computer == "Nuke":
+		wins += 1
+		print("You WIN!")	
+	elif player == "Nuke" and computer == "Nuke":
+		print("Both LOSE!")	
+	elif player == computer:
+		print("It is a tie!")
+		tie += 1
+	else:
+		print("You LOSE!")
+	
+	
+print(f"You played {rounds} rounds, and won {wins} rounds, playing tie in {tie} rounds.")
+
